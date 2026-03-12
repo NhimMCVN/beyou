@@ -1,4 +1,0 @@
-﻿<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
-<div class="max-w-7xl mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
-<div class="flex items-center gap-2">
-<img alt="BeYOU Montessori Logo" class="h-10 w-auto" data-alt="Official BeYOU Montessori logo with dragonfly motif" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfQAAAH0CAYAAADL1t+KAAAQAElEQVR4Aez9Cbhtx1keCL9vrb3POXfWZA22kI0xc0hI4O/O8Gfk7z/5ewgBbMCMYbY7AxAINBASeZBt2cEQJ/C30yQ8gQB51Elokm4SOhAHnBjjiEG2sCRrsnTnSXe+Z9h7V/X7Vq3ae+199rn3SpZsyXctr
