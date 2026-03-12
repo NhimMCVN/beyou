@@ -636,13 +636,6 @@
 
         document.querySelectorAll("button, a").forEach(function (el) {
           var txt = el.innerText.trim();
-          if (txt === "Đăng nhập") {
-            el.style.cursor = "pointer";
-            el.onclick = function (e) {
-              e.preventDefault();
-              location.href = "dang-nhap.html";
-            };
-          }
           if (
             txt.includes("Bắt đầu ngay") ||
             txt.includes("Đăng Ký Ngay") ||

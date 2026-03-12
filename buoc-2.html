@@ -281,9 +281,31 @@
               location.href = "buoc-1.html";
             };
           }
-          if (txt.includes("Đăng nhập")) {
+        });
+      })();
+    </script>
+    <script>
+      (function () {
+        var logoEl = document.querySelector("header img, header .font-bold");
+        if (logoEl) {
+          logoEl.style.cursor = "pointer";
+          logoEl.onclick = function () {
+            location.href = "index.html";
+          };
+        }
+
+        document.querySelectorAll("button").forEach(function (btn) {
+          var txt = btn.innerText.trim();
+          if (txt.includes("Tiếp theo")) {
+            btn.style.cursor = "pointer";
             btn.onclick = function () {
-              location.href = "dang-nhap.html";
+              location.href = "buoc-3.html";
+            };
+          }
+          if (txt.includes("Quay lại")) {
+            btn.style.cursor = "pointer";
+            btn.onclick = function () {
+              location.href = "buoc-1.html";
             };
           }
         });
@@ -313,11 +335,7 @@
               location.href = "buoc-1.html";
             };
           }
-          if (txt.includes("Đăng nhập")) {
-            btn.onclick = function () {
-              location.href = "dang-nhap.html";
-            };
-          }
+          
         });
       })();
     </script>
@@ -345,43 +363,7 @@
               location.href = "buoc-1.html";
             };
           }
-          if (txt.includes("Đăng nhập")) {
-            btn.onclick = function () {
-              location.href = "dang-nhap.html";
-            };
-          }
-        });
-      })();
-    </script>
-    <script>
-      (function () {
-        var logoEl = document.querySelector("header img, header .font-bold");
-        if (logoEl) {
-          logoEl.style.cursor = "pointer";
-          logoEl.onclick = function () {
-            location.href = "index.html";
-          };
-        }
-
-        document.querySelectorAll("button").forEach(function (btn) {
-          var txt = btn.innerText.trim();
-          if (txt.includes("Tiếp theo")) {
-            btn.style.cursor = "pointer";
-            btn.onclick = function () {
-              location.href = "buoc-3.html";
-            };
-          }
-          if (txt.includes("Quay lại")) {
-            btn.style.cursor = "pointer";
-            btn.onclick = function () {
-              location.href = "buoc-1.html";
-            };
-          }
-          if (txt.includes("Đăng nhập")) {
-            btn.onclick = function () {
-              location.href = "dang-nhap.html";
-            };
-          }
+          
         });
       })();
     </script>
