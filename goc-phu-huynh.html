@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="vi">
   <head>
     <meta charset="utf-8" />
@@ -125,7 +125,14 @@
                   type="text"
                 />
               </div>
-              <a href="dang-nhap.html">
+              <a
+                href="dang-nhap.html"
+                class="md:hidden p-2 rounded-lg text-slate-700 dark:text-slate-300 hover:bg-primary/10 transition-colors inline-flex"
+                aria-label="Đăng nhập"
+              >
+                <span class="material-symbols-outlined">person</span>
+              </a>
+              <a href="dang-nhap.html" class="hidden md:inline-block">
                 <button
                   class="bg-secondary text-white px-5 py-2 rounded-full font-medium hover:bg-secondary/90 transition-all shadow-sm"
                   style=""
@@ -133,10 +140,35 @@
                   Đăng nhập
                 </button>
               </a>
+              <button id="mobile-menu-btn" type="button" class="md:hidden p-2 rounded-lg text-slate-700 dark:text-slate-300 hover:bg-primary/10 transition-colors" aria-label="Mở menu">
+                <span class="material-symbols-outlined">menu</span>
+              </button>
             </div>
           </div>
         </div>
       </header>
+      <!-- Mobile menu -->
+      <div id="mobile-menu-overlay" class="fixed inset-0 z-40 bg-black/50 backdrop-blur-sm hidden md:!hidden" aria-hidden="true"></div>
+      <div id="mobile-menu-panel" class="fixed top-0 right-0 z-50 h-full w-[280px] max-w-[85vw] bg-white dark:bg-background-dark border-l border-primary/10 shadow-xl transform translate-x-full transition-transform duration-300 ease-out md:!hidden" aria-hidden="true">
+        <div class="flex items-center justify-between p-4 border-b border-primary/10">
+          <span class="text-lg font-bold text-primary font-display">Menu</span>
+          <button id="mobile-menu-close" type="button" class="p-2 rounded-lg hover:bg-primary/10 text-slate-700 dark:text-slate-300 transition-colors" aria-label="Đóng menu">
+            <span class="material-symbols-outlined">close</span>
+          </button>
+        </div>
+        <nav class="flex flex-col p-4 gap-1">
+          <a href="ve-beyou.html" class="py-3 px-3 rounded-lg text-slate-700 dark:text-slate-300 font-semibold hover:bg-primary/10 hover:text-primary transition-colors">Về BeYOU</a>
+          <a href="lo-trinh.html" class="py-3 px-3 rounded-lg text-slate-700 dark:text-slate-300 font-semibold hover:bg-primary/10 hover:text-primary transition-colors">Lộ Trình</a>
+          <a href="bang-gia.html" class="py-3 px-3 rounded-lg text-slate-700 dark:text-slate-300 font-semibold hover:bg-primary/10 hover:text-primary transition-colors">Bảng Giá</a>
+          <a href="goc-phu-huynh.html" class="py-3 px-3 rounded-lg text-slate-700 dark:text-slate-300 font-semibold hover:bg-primary/10 hover:text-primary transition-colors">Góc Phụ Huynh</a>
+          <a href="tu-van.html" class="py-3 px-3 rounded-lg text-slate-700 dark:text-slate-300 font-semibold hover:bg-primary/10 hover:text-primary transition-colors">Tư vấn</a>
+        </nav>
+        <div class="p-4 border-t border-primary/10">
+          <a href="dang-nhap.html" class="block">
+            <button type="button" class="w-full bg-accent-orange hover:bg-orange-600 text-white py-3 rounded-lg text-sm font-bold transition-all shadow-md">Đăng nhập</button>
+          </a>
+        </div>
+      </div>
       <!-- Breadcrumbs -->
       <nav class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-6">
         <ol class="flex items-center space-x-2 text-sm text-slate-500">
@@ -520,7 +552,7 @@
     </div>
     <script>
       (function () {
-        var logoArea = document.querySelector("header .flex.items-center");
+        var logoArea = document.querySelector("header div.flex.items-center.gap-2, header div.flex.items-center.gap-3");
         if (logoArea) {
           logoArea.style.cursor = "pointer";
           logoArea.onclick = function () {
@@ -554,5 +586,6 @@
         }
       })();
     </script>
+    <script src="mobile-menu.js"></script>
   </body>
 </html>

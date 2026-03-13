@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="vi" style="">
   <head>
     <meta charset="utf-8" />
@@ -91,6 +91,13 @@
             >
           </nav>
           <div class="flex items-center gap-4">
+            <a
+              href="dang-nhap.html"
+              class="md:hidden p-2 rounded-lg text-slate-700 dark:text-slate-300 hover:bg-primary/10 transition-colors inline-flex"
+              aria-label="Đăng nhập"
+            >
+              <span class="material-symbols-outlined">person</span>
+            </a>
             <div class="relative hidden lg:flex items-center">
               <input
                 class="w-48 xl:w-64 h-10 pl-4 pr-10 rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
@@ -109,9 +116,34 @@
             >
               <span class="material-symbols-outlined" style="">search</span>
             </button>
+            <button id="mobile-menu-btn" type="button" class="md:hidden p-2 rounded-lg text-slate-700 dark:text-slate-300 hover:bg-primary/10 transition-colors" aria-label="Mở menu">
+              <span class="material-symbols-outlined">menu</span>
+            </button>
           </div>
         </div>
       </header>
+      <!-- Mobile menu -->
+      <div id="mobile-menu-overlay" class="fixed inset-0 z-40 bg-black/50 backdrop-blur-sm hidden md:!hidden" aria-hidden="true"></div>
+      <div id="mobile-menu-panel" class="fixed top-0 right-0 z-50 h-full w-[280px] max-w-[85vw] bg-white dark:bg-background-dark border-l border-primary/10 shadow-xl transform translate-x-full transition-transform duration-300 ease-out md:!hidden" aria-hidden="true">
+        <div class="flex items-center justify-between p-4 border-b border-primary/10">
+          <span class="text-lg font-bold text-primary font-display">Menu</span>
+          <button id="mobile-menu-close" type="button" class="p-2 rounded-lg hover:bg-primary/10 text-slate-700 dark:text-slate-300 transition-colors" aria-label="Đóng menu">
+            <span class="material-symbols-outlined">close</span>
+          </button>
+        </div>
+        <nav class="flex flex-col p-4 gap-1">
+          <a href="ve-beyou.html" class="py-3 px-3 rounded-lg text-slate-700 dark:text-slate-300 font-semibold hover:bg-primary/10 hover:text-primary transition-colors">Về BeYOU</a>
+          <a href="lo-trinh.html" class="py-3 px-3 rounded-lg text-slate-700 dark:text-slate-300 font-semibold hover:bg-primary/10 hover:text-primary transition-colors">Lộ Trình</a>
+          <a href="bang-gia.html" class="py-3 px-3 rounded-lg text-slate-700 dark:text-slate-300 font-semibold hover:bg-primary/10 hover:text-primary transition-colors">Bảng Giá</a>
+          <a href="goc-phu-huynh.html" class="py-3 px-3 rounded-lg text-slate-700 dark:text-slate-300 font-semibold hover:bg-primary/10 hover:text-primary transition-colors">Góc Phụ Huynh</a>
+          <a href="tu-van.html" class="py-3 px-3 rounded-lg text-slate-700 dark:text-slate-300 font-semibold hover:bg-primary/10 hover:text-primary transition-colors">Tư vấn</a>
+        </nav>
+        <div class="p-4 border-t border-primary/10">
+          <a href="dang-nhap.html" class="block">
+            <button type="button" class="w-full bg-primary text-slate-900 py-3 rounded-lg text-sm font-bold transition-all">Đăng nhập</button>
+          </a>
+        </div>
+      </div>
       <main class="flex-grow">
         <!-- Hero Section -->
         <section
@@ -494,7 +526,7 @@
     </div>
     <script>
       (function () {
-        var logoArea = document.querySelector("header .flex.items-center");
+        var logoArea = document.querySelector("header div.flex.items-center.gap-2, header div.flex.items-center.gap-3");
         if (logoArea) {
           logoArea.style.cursor = "pointer";
           logoArea.onclick = function () {
@@ -505,7 +537,6 @@
         
       })();
     </script>
-    
-    
+    <script src="mobile-menu.js"></script>
   </body>
 </html>
